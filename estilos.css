@@ -45,8 +45,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
 
 #contenedorUno {
@@ -56,9 +56,16 @@ body {
   background-color: rgba(13, 94, 131, 0.911);
   border: 2px double black;
   text-align: center;
+
+}
+
+.nav ul{
+  justify-content: center;
+
 }
 
 .nav a {
+  display: flex;
   text-decoration: none;
   color: rgb(14, 8, 107); 
   font-size: 1rem;
@@ -82,6 +89,7 @@ body {
   align-items: flex-start;
   padding-left: 40px;
   border-radius: 5px;
+  margin-bottom: 50px;
 }
 
 #banner h2, 
@@ -126,15 +134,6 @@ body {
   text-align: center;
   
 }
-.container-contact100 {
-  width: 500px;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.452);
-}
 
 #bannerContacto{
   background-image: url('imagenesDiver/divingBanner.jpg');
@@ -156,17 +155,30 @@ body {
   width: 550px;
   background: transparent;
   padding: 25px 0px 30px 0px;
-  
+  display: flex;
+  flex-direction: column;
+   
+}
+.container-contact100 {
+  width: 550px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.452);
 }
 .contact100-form {
   width: 100%;
-  justify-content: center;
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contact100-form-title {
   display: block;
-  font-family: Ubuntu-Bold;
+  font-family: marmelad, sans-serif;
   font-size: 30px;
   color: #403866;
   line-height: 1.2;
@@ -193,6 +205,7 @@ textarea.input100 {
 
 .container-fluid {
   padding: 100px 50px;
+  margin-bottom: 20px;
 }
 
 #myCarousel {
@@ -255,20 +268,19 @@ textarea.input100 {
 }
 
 .footer {
+  width: 100%;
+  height: 60px;
+  position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center; 
   align-items: center;
-  background-color: rgba(13, 94, 131, 0.911);
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 15px;
+  background-color: rgba(13, 94, 131, 0.911); 
 }
 
 .footer ul {
   display: flex;
-  gap: 40px; 
+  gap: 10px; 
   list-style: none;
   padding: 0;
   margin: 0;
@@ -276,6 +288,7 @@ textarea.input100 {
 
 
 .footer ul li a {
+  justify-content: center;
   text-decoration: none; 
   color: rgb(14, 8, 107); 
   font-size: 1rem; 
@@ -292,11 +305,11 @@ textarea.input100 {
     gap: 10px;
   }
   
-  #banner {
-    height: 250px;
-    padding-left: 20px;
+  #banner, #bannerContacto {
+    height: auto;
+    padding: 20px;
   }
-  
+
   #banner h2 {
     font-size: 1.5em;
   }
@@ -318,5 +331,22 @@ textarea.input100 {
     font-size: 1em;
   }
 
+  .container-contact100, .wrap-contact100 {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .footer {
+    position: relative;
+    height: auto;
+    width: 100%;
+  }
+
+  .footer ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  
 
 }
