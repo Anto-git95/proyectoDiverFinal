@@ -53,15 +53,13 @@ body {
   list-style: none;
   margin: 8px;
   border-radius: 55px;
-  background-color: rgba(13, 94, 131, 0.911);
+  background-color: rgba(27, 86, 114, 0.877);
   border: 2px double black;
   text-align: center;
-
 }
 
 .nav ul{
   justify-content: center;
-
 }
 
 .nav a {
@@ -101,29 +99,19 @@ body {
   padding-top: 30px;
   height: 100%;
 }
-.main .card {
-  width: 100%;
-  display: flex;
-  flex-wrap: nowrap;
-  border: 1px solid #d6d3d3; 
-  border-radius: 8px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-  height: 95%; 
-  overflow: hidden;
-  background-color: #ffffff;
-}
 .card {
-  width: 200px;
-  height: 100%;
-  padding-top: 10px;
+  width: 100px;
+  height: 300px;
+  padding-top: 5px;
   justify-content: center;
   justify-items: center;
   align-items: center;
   margin: 3px;
 }
 .card img{
+  padding: 5px;
   height: 150px;
-  width: 100px;
+  width: 150px;
 }
 
 .main .card-body {
@@ -134,6 +122,35 @@ body {
   text-align: center;
   
 }
+.productos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: rgba(27, 86, 114, 0.877);
+  border-radius: 20px;
+}
+
+.productos-container .card {
+  flex: 1 1 calc(33.33% - 1rem); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-color: rgba(27, 86, 114, 0.877);
+  transition: transform 0.3s;
+  margin: 1rem;
+}
+
+.productos-container .card:hover {
+  transform: scale(1.05);
+}
+
+.productos-container .card img {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
 
 #bannerContacto{
   background-image: url('imagenesDiver/divingBanner.jpg');
@@ -167,7 +184,7 @@ body {
   justify-items: center;
   align-items: center;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.452);
+  background-color: rgba(27, 86, 114, 0.205);
 }
 .contact100-form {
   width: 100%;
@@ -180,7 +197,7 @@ body {
   display: block;
   font-family: marmelad, sans-serif;
   font-size: 30px;
-  color: #403866;
+  color: rgba(27, 86, 114, 0.877);
   line-height: 1.2;
   text-transform: uppercase;
   text-align: center;
@@ -208,63 +225,37 @@ textarea.input100 {
   margin-bottom: 20px;
 }
 
-#myCarousel {
-  max-width: 100%;
-  margin: auto;
-  padding: 20px 0;
-  color: #fff;
-  font-family: marmelad, sans-serif;
+.reseñas-section {
+  width: 700px;
+  padding: 1rem 50px  160px;
+  background-image: url(imagenesDiver/divingBanner.jpg);
+  background-size: cover;
 }
-
-.carousel-indicators button {
-  background-color: #ffffff46;
-  width: 10px;
-  height: 10px;
-  border-radius: 10%;
-  margin: 5px;
-}
-
-.carousel-indicators .active {
-  background-color: #007bff;
-}
-
-.carousel-item {
+.reseña-card {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
   text-align: center;
-  padding: 40px 20px;
-  font-size: 1.2em;
-  line-height: 1.5;
-  color: #ffffff;
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.carousel-item h4 {
-  font-weight: 400;
-  margin: 0;
+.reseña-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.carousel-item span {
+.reseña-card p {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.reseña-card span {
   display: block;
-  font-style: italic;
-  font-size: 1em;
-  color: #dcdcdc;
-  margin-top: 10px;
-}
-.botonesControl{
-  justify-content: space-evenly;
-  display:flex;
-  align-self: center;
-}
-
-.carousel-control-left,
-.carousel-control-right {
-  background-color: rgba(44, 31, 128, 0.521);
-  border-radius: 20%;
-  width: 130px;
-  height: 30px;
-  margin: 20px;
-  align-items: center;
-  justify-content: space-evenly;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
 }
 
 .footer {
@@ -275,7 +266,7 @@ textarea.input100 {
   flex-direction: column;
   justify-content: center; 
   align-items: center;
-  background-color: rgba(13, 94, 131, 0.911); 
+  background-color: rgba(27, 86, 114, 0.877);
 }
 
 .footer ul {
@@ -297,6 +288,50 @@ textarea.input100 {
 
 .footer ul li a:hover {
   color: #ebeef0; 
+}
+
+@media (max-width: 992px) {
+  .productos-container .card {
+      flex: 1 1 calc(50% - 1rem); 
+  }
+}
+
+@media (max-width: 576px) {
+  .nav ul{
+    justify-content: center;
+  }
+  
+  .nav a {
+    display: flex;
+    text-decoration: none;
+    color: rgb(14, 8, 107); 
+    font-size: 1rem;
+    transition: color 0.3s ease; 
+  }
+
+
+  .productos-container .card {
+      flex: 1 1 100%; 
+  }
+  .footer {
+    position: relative;
+    height: auto;
+    width: 100%;
+  }
+
+  .footer ul {
+    flex-direction: column;
+    gap: 10px;
+   
+  }
+
+  .footer ul li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+  }
 }
 
 
