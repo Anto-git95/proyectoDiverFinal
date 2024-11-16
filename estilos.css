@@ -97,65 +97,85 @@ body {
 #banner h5 {
   margin: 0;
 }
-.container {
-  padding-top: 30px;
-  height: 100%;
-}
-.card {
-  width: 100px;
-  height: 300px;
-  padding-top: 5px;
-  justify-content: center;
-  justify-items: center;
-  align-items: center;
-  margin: 3px;
-}
-.card img{
-  padding: 5px;
-  height: 150px;
-  width: 150px;
-}
 
-.main .card-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-  padding: 6px; 
-  text-align: center;
-  
-}
 .productos-container {
+  width: 100%;
+  background-color: #144455e1;
+  padding: 25px;
+  display: block;
+  border-radius: 25px;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.row{
+  justify-content: space-around;
   display: flex;
   flex-wrap: wrap;
-  height: auto;
-  gap: 10px;
-  justify-content: center;
   align-items: center;
-  background-color: rgba(27, 86, 114, 0.877);
-  border-radius: 20px;
+  gap: 5px;
+  padding: 10px;
+
+}
+/* Estilo de las tarjetas */
+.card {
+  width: 250px;
+  padding: 10px;
+  margin: 5px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.productos-container .card {
-  flex: 1 1 calc(33.33% - 1rem); 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-color: rgba(27, 86, 114, 0.877);
-  transition: transform 0.3s;
-  margin: 1rem;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.productos-container .card:hover {
-  transform: scale(1.05);
+/* Estilo para las imágenes */
+.card img {
+  width: 90%;
+  height: 200px;
+  object-fit: contain;
+  border-bottom: 3px solid rgba(27, 86, 114, 0.877);
 }
 
-.productos-container .card img {
-  max-height: 200px;
-  object-fit: cover;
-}
-
+/* Estilo del contenido de las tarjetas */
 .card-body {
-  padding: 1.5rem;
+  padding: 15px;
 }
 
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1b5672;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #555555;
+  margin-bottom: 15px;
+}
+
+/* Botones */
+.btn-primary {
+  background-color: #1b5672;
+  border: none;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #144455;
+  color: #ffffff;
+}
 
 #bannerContacto{
   background-image: url('imagenesDiver/divingBanner.jpg');
@@ -535,6 +555,31 @@ textarea.input100 {
 .footer ul {
   flex-direction: row;
   gap: 5px;
+}
+
+.wrap-contact100 {
+  width: 100%;
+  height: 350px;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   
+}
+.container-contact100 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(27, 86, 114, 0.205);
+}
+.contact100-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 
