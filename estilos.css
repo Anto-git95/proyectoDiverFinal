@@ -330,3 +330,68 @@ textarea.input100 {
   color: #ebeef0; 
 }
 
+@media (max-width: 1024px) {
+  .layout {
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
+
+  @media (max-width: 768px) {
+    html {
+      font-size: 16px;
+    }
+  
+    .layout {
+      padding: 0 10px;
+    }
+  }
+  #contenedorUno {
+    margin-bottom: 50px;
+    padding: 5px;
+    height: auto;
+    text-align: center;
+  }
+
+  .main {
+    margin-top: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 10px;
+  }
+
+  #banner,
+  #bannerContacto {
+    height: 200px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .productos-container .card {
+    flex: 1 1 100%; /* Ocupa todo el ancho */
+  }
+
+  .reseñas-section {
+    padding: 10px;
+    height: auto;
+  }
+
+  .reseña-card {
+    margin: 10px auto;
+    width: 90%;
+  }
+
+  .footer {
+    flex-direction: column;
+    padding: 10px;
+    height: auto;
+  }
+
+  .footer ul {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
