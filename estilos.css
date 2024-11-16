@@ -339,6 +339,11 @@ textarea.input100 {
       "main"
       "footer";
   }
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
   @media (max-width: 768px) {
     html {
@@ -348,7 +353,12 @@ textarea.input100 {
     .layout {
       padding: 0 10px;
     }
-  }
+    .header {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+  
   #contenedorUno {
     margin-bottom: 50px;
     padding: 5px;
