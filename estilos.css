@@ -477,6 +477,7 @@ textarea.input100 {
 
   body{
     height: 100vh;
+    width: 100%;
   }
 
   .layout {
@@ -487,6 +488,7 @@ textarea.input100 {
 
   .header {
     grid-area: header;
+    width: 100%;
     display: ruby;
     flex-direction: column;
     align-items: center;
@@ -518,12 +520,12 @@ textarea.input100 {
 
 .main {
   grid-area: main;
+  width: 100%;
   display: flex;
-  padding: 5px;
+  padding: 2px;
   flex-grow: 1;
   margin-bottom: 100px;
 }
-
 
 #banner {
   background-image: url('imagenesDiver/divingBanner.jpg');
@@ -544,18 +546,6 @@ textarea.input100 {
 }
 
 
-.footer {
-  grid-area: footer;
-  position: fixed;
-  flex-direction: row;
-  padding: 5px;
-  height: auto;
-}
-
-.footer ul {
-  flex-direction: row;
-  gap: 5px;
-}
 
 .wrap-contact100 {
   width: 100%;
@@ -581,7 +571,35 @@ textarea.input100 {
   flex-direction: column;
   align-items: center;
 }
+.footer {
+  grid-area: footer;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+}
 
+.footer ul {
+  display: flex;
+  flex-direction: row;
+  height: 60px;
+  gap: 5px;
+}
 
+.footerProductos{
+  grid-area: footer;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+
+}
+.footerProductos ul{
+  display: flex;
+  flex-direction: row;
+  height: 70px;
+  gap: 5px;
+  align-items: center;
+}
 
 }
