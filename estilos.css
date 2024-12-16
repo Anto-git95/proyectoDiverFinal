@@ -1,132 +1,117 @@
-@import url('https://fonts.googleapis.com/css2?family=Balthazar&family=Buda:wght@300&family=Contrail+One&family=Marmelad&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
-
-html { 
-  font-size: 18px;
-  font-family: marmelad, sans-serif;
-  height: 100vh;
+/* General Styles */
+html {
+  font-size: 16px;
+  font-family: 'Marmelad', sans-serif;
+  height: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  height: 100vh;
+  height: 100%;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  font-family: marmelad, sans-serif;
-  background-color: rgba(255, 255, 255, 0.616);
+  background-color: #b8c5e0;
+  color: #333;
 }
 
 .layout {
-  width: 100%;
-  margin: 0 auto;
   display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 100px auto auto;
   grid-template-areas:
-    "header" 
-    "main" 
+    "header"
+    "main"
     "footer";
+  grid-template-rows: auto 1fr auto;
+  height: 100%;
 }
-.header { 
+
+/* Header Styles */
+.header {
   grid-area: header;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
+  background-color: #1b5672;
+  color: #fff;
+  padding: 10px 20px;
 }
 
-.navbar {
-  width: 100%;
-  height: 100%;
+.navbar ul {
   display: flex;
+  justify-content: center;
   list-style: none;
-  margin: 5px;
-  border-radius: 40px;
-  background-color: rgba(27, 86, 114, 0.877);
-  border: 2px double black;
-  text-align: center;
-  justify-content: center;
-  margin-bottom: 5px;
-}
-
-.nav ul{
-  justify-content: center;
-}
-
-.nav a {
-  display: flex;
-  text-decoration: none;
-  color: rgb(14, 8, 107); 
-  font-size: 1rem;
-  transition: color 0.3s ease; 
-}
-
-.nav a:hover {
-  color: #ebeef0; 
-}
-
-.main {
-  grid-area: main; 
-  width: 100%;
-  height: auto;
-  margin-top: 5px;
-  justify-content: center;
+  margin: 0;
+  padding: 0;
   align-items: center;
-  margin-left: 5px;
-  margin-right: 5px;
 }
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #ddd;
+}
+
+.nav-link img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Banner Section */
 #banner {
   background-image: url('imagenesDiver/divingBanner.jpg');
   background-size: cover;
   background-position: center;
-  width: 100%;
-  height: 450px;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  margin-top: 15px;
+  padding: 50px 20px;
+  color: #ddd;
+  text-align: left;
+  border-radius: 10px;
+  margin: 20px auto;
+  width: 90%;
+}
+
+#banner h2 {
+  font-size: 2rem;
   margin-bottom: 10px;
-  padding-left: 40px;
-  padding-right: 40px;
-  border-radius:40px;
 }
 
-#banner h2, 
 #banner h5 {
-  margin: 0;
+  font-size: 1.2rem;
 }
 
+/* Products Section */
 .productos-container {
-  width: 100%;
-  background-color: #144455e1;
-  padding: 25px;
-  display: block;
-  border-radius: 25px;
-  align-items: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.row{
-  justify-content: space-around;
+
+.row {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  gap: 5px;
-  padding: 10px;
-
+  gap: 20px;
+  justify-content: center;
 }
-/* Estilo de las tarjetas */
+
 .card {
   width: 250px;
-  padding: 10px;
   margin: 5px;
-  background-color: #ffffff;
-  border: none;
+  padding: 5px;
+  background-color: #fff;
   border-radius: 10px;
-  overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
@@ -134,472 +119,136 @@ body {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilo para las imágenes */
 .card img {
-  width: 90%;
+  width: 100%;
   height: 200px;
-  object-fit: contain;
-  border-bottom: 3px solid rgba(27, 86, 114, 0.877);
+  object-fit: cover;
 }
 
-/* Estilo del contenido de las tarjetas */
 .card-body {
   padding: 15px;
 }
 
 .card-title {
   font-size: 1.2rem;
-  font-weight: bold;
   color: #1b5672;
   margin-bottom: 10px;
 }
 
 .card-text {
   font-size: 1rem;
-  color: #555555;
+  color: #555;
   margin-bottom: 15px;
 }
 
-/* Botones */
 .btn-primary {
-  background-color: #1b5672;
-  border: none;
-  color: #ffffff;
+  display: inline-block;
   padding: 10px 20px;
-  font-size: 1rem;
+  background-color: #1b5672;
+  color: #fff;
+  text-decoration: none;
   border-radius: 5px;
-  text-transform: uppercase;
-  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  transition: background-color 0.3s;
 }
 
 .btn-primary:hover {
   background-color: #144455;
-  color: #ffffff;
 }
 
-#bannerContacto{
-  background-image: url('imagenesDiver/divingBanner.jpg');
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 450px;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-left: 40px;
-  border-radius: 5px;
-  margin-top: 25px;
-
-
-}
-.wrap-contact100 {
-  width: 550px;
-  background: transparent;
-  padding: 25px 0px 30px 0px;
-  display: flex;
-  flex-direction: column;
-   
-}
-.container-contact100 {
-  width: 550px;
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  align-items: center;
+/* Reviews Section */
+.reseñas-section {
+  background-color: #1b5672;
+  color: #fff;
   padding: 20px;
-  background-color: rgba(27, 86, 114, 0.205);
-}
-.contact100-form {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.contact100-form-title {
-  display: block;
-  font-family: marmelad, sans-serif;
-  font-size: 30px;
-  color: rgba(27, 86, 114, 0.877);
-  line-height: 1.2;
-  text-transform: uppercase;
   text-align: center;
-  padding-bottom: 20px;
+  border-radius: 10px;
+  width: 90%;
+  margin: 20px auto;
 }
 
-.wrap-input100 {
-  align-items: center;
-  justify-content: left;
-  padding: 5px;
-}
-
-textarea.input100 {
-  min-height: 109px;
-  width: 210px;
-  padding: 19px 35px 0 35px;
-}
-
-.contact100-form-btn {
-  width: 150px;
-}
-
-.container-fluid {
-  padding: 100px 50px;
+.reseñas-section h2 {
+  font-size: 1.8rem;
   margin-bottom: 20px;
 }
 
-.reseñas-section {
-  width: 100%;
-  height: 500px;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
-  background-image: url(imagenesDiver/divingBanner.jpg);
-  background-position: center;
- 
-}
-.reseñas-section h2{
-  margin: 20px;
-}
-
 .reseña-card {
-  background-color: #f8f9fa;
-  border: 1px solid #ddd;
+  background-color: #fff;
+  color: #333;
+  padding: 15px;
+  margin: 10px auto;
   border-radius: 10px;
-  margin: 10px;
-  text-align: center;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
 }
 
 .reseña-card:hover {
   transform: scale(1.05);
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.reseña-card p {
-  font-size: 1.1rem;
-  color: #333;
-  margin-bottom: 20px;
-  margin-top: 20px;
-
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .reseña-card span {
   display: block;
-  margin-top: 0.5rem;
   font-size: 0.9rem;
-  color: #555;
+  color: #777;
+  margin-top: 10px;
 }
 
-/*------------------footer----------------*/
-
-.footerProductos {
-  grid-area: footer;
-  width: 100%;
-  height: 50px;
-  display: flex;
-  justify-content: center; 
-  align-items: center;
-  background-color: rgba(27, 86, 114, 0.877);
-}
-.footerProductos ul {
-  display: flex;
-  position: relative;
-  gap: 10px; 
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
+/* Footer Styles */
 .footer {
-  width: 100%;
-  height: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; 
-  align-items: center;
-  background-color: rgba(27, 86, 114, 0.877);
+  background-color: #1b5672;
+  color: #fff;
+  text-align: center;
+  padding: 10px 20px;
   bottom: 0;
-  position: absolute;
-  margin-top: 0;
+  position: sticky;
+  display: flex;
 }
 
 .footer ul {
   display: flex;
-  gap: 10px; 
+  justify-content: center;
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 10px;
 }
 
+.footer ul li {
+  margin: 0 10px;
+}
 
 .footer ul li a {
-  justify-content: center;
-  text-decoration: none; 
-  color: rgb(14, 8, 107); 
-  font-size: 1rem; 
-  transition: color 0.3s ease; /
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
 }
 
 .footer ul li a:hover {
-  color: #ebeef0; 
+  text-decoration: underline;
 }
 
-@media (max-width: 1024px) {
-  body{
-    height: 100vh;
+.footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  #banner {
+    text-align: center;
   }
-  .layout {
-    grid-template-columns: 100%;
-    display: flex;
+
+  .navbar ul {
     flex-direction: column;
+    gap: 10px;
   }
-  .header{
+
+  .row {
     flex-direction: column;
     align-items: center;
-    height: auto;
-  }
-  .navbar {
-    margin-bottom: 5px;
-    padding: 5px;
-    height: auto;
-    text-align: center;
-  }
-  .main {
-    margin-top: 2px;
-    margin-left: 0;
-    margin-right: 0;
-    padding: 10px;
-  }
-}
-
-  @media (max-width: 768px) {
-    html {
-      font-size: 16px;
-    }
-    body{
-      height: 100vh;
-    }  
-    .layout {
-      grid-template-columns: 100%;
-      grid-template-rows: auto auto auto;
-      grid-template-areas:
-        "header"
-        "main"
-        "footer";
-    }
-    .header {
-      display: ruby;
-      flex-direction: column;
-      align-items: center;
-    }  
-  
-  .navbar {
-    margin-bottom: 5px;
-    padding: 5px;
-    height: auto;
-    text-align: center;
-  }
-
-  .logo{
-    display: flex;
-    height: auto;
-    width: auto;
-  }
-
-  .main {
-    margin-top: 2px;
-    margin-left: 0;
-    margin-right: 0;
-    padding: 10px;
-  }
-
-  #banner,
-  #bannerContacto {
-      background-image: url('imagenesDiver/divingBanner.jpg');
-      background-size: cover;
-      background-position: center;
-      width: 100%;
-      height: 450px;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      margin-top: 15px;
-      margin-bottom: 10px;
-      padding-left: 40px;
-      padding-right: 40px;
-      border-radius:40px;
-  }
-
-  .productos-container .card {
-    flex: 1 1 100%; /* Ocupa todo el ancho */
-  }
-
-  .reseñas-section {
-    padding: 10px;
-    height: auto;
   }
 
   .reseña-card {
-    margin: 10px auto;
-    width: 90%;
+    max-width: 90%;
   }
-
-  .footer {
-    width: 100%;
-    height: 50px;
-    display: flex;
-    flex-direction: colum;
-    justify-content: center; 
-    align-items: center;
-    background-color: rgba(27, 86, 114, 0.877);
-    bottom: 0;
-    position: fixed;
-    margin-top: 0;
-  }
-
-  .footer ul {
-    flex-direction: row;
-    gap: 5px;
-  }
-}
-
-@media (max-width: 680px) {
-  html {
-    font-size: 16px;
-  }
-
-  body{
-    height: 100vh;
-    width: 100%;
-  }
-
-  .layout {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-  }
-
-  .header {
-    grid-area: header;
-    width: 100%;
-    display: ruby;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 2px;
-  }  
-
-.navbar {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 2px;
-  height: auto;
-  text-align: center;
-}
-
-.navbar ul {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 3px;
-  height: auto;
-  text-align: center;
-  align-items: center;
-}
-
-.logo{
-  display: flex;
-  height: auto;
-  width: auto;
-}
-
-.main {
-  grid-area: main;
-  width: 100%;
-  display: flex;
-  padding: 2px;
-  flex-grow: 1;
-  margin-bottom: 100px;
-}
-
-#banner {
-  background-image: url('imagenesDiver/divingBanner.jpg');
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 100%;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  margin-top: auto;
-  margin-bottom: auto;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius:40px;
-}
-
-
-
-.wrap-contact100 {
-  width: 100%;
-  height: 350px;
-  background: transparent;
-  display: flex;
-  flex-direction: column;
-  align-items: center;   
-}
-.container-contact100 {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  background-color: rgba(27, 86, 114, 0.205);
-}
-.contact100-form {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.footer {
-  grid-area: footer;
-  position: fixed;
-  display: flex;
-  flex-direction: row;
-  padding: 5px;
-}
-
-.footer ul {
-  display: flex;
-  flex-direction: row;
-  height: 60px;
-  gap: 5px;
-}
-
-.footerProductos{
-  grid-area: footer;
-  height: 80px;
-  display: flex;
-  flex-direction: row;
-  padding: 5px;
-
-}
-.footerProductos ul{
-  display: flex;
-  flex-direction: row;
-  height: 70px;
-  gap: 5px;
-  align-items: center;
-}
-
 }
