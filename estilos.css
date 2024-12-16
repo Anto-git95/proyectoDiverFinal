@@ -156,6 +156,14 @@ body {
   background-color: #144455;
 }
 
+
+
+
+
+
+
+
+
 /* Reviews Section */
 .reseñas-section {
   background-color: #1b5672;
@@ -237,13 +245,32 @@ body {
   #banner {
     text-align: center;
   }
-
   .navbar ul {
-    flex-direction: column;
-    gap: 10px;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
+  
+  .navbar li {
+    margin: 0 15px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s;
   }
 
-  .row {
+.logo{
+  top: 5;
+  position: fixed;
+}
+  
+   .row {
     flex-direction: column;
     align-items: center;
   }
