@@ -156,6 +156,27 @@ body {
   background-color: #144455;
 }
 
+.productosCarrito{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.itemProducto{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #76a5d13b;
+}
+
+.imgItem{
+width: 6rem;
+}
+
+.carritoVacio{
+  display: none;
+}
+
 
 
 
