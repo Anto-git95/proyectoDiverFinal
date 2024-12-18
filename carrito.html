@@ -27,15 +27,16 @@
                     <li class="nav-item"><a class="nav-link" aria-current="page" href="productos.html">PRODUCTOS</a></li>
                     <li class="nav-item"><a class="nav-link" href="contacto.html">CONTACTO</a></li>
                     <li class="nav-item"><a class="nav-link" href="reseñas.html">RESEÑAS</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="carrito.html"><img src="imagenesDiver/carrito-de-compras.png" alt="carrito">CARRITO</a>
+                    <li class="nav-item"><a class="nav-link active" href="carrito.html"><img src="imagenesDiver/carrito-de-compras.png" class="btnCarrito"alt="carrito">CARRITO <i class="bi bi-1-square"></i>
+                    </a>
                 </ul>
             </div>
         </header><!---------------------------------- MAIN------------------------------------>
         <div class="main">
         <div class="container my-5 contenedorCarrito">
             <h2>Carrito</h2>
-            <p class="carritoVacio">El carrito esta vacio</p> <i class="bi bi-emoji-frown-fill"></i>
-           <div class="productosCarrito">
+            <p class="carritoVacio ">El carrito esta vacio <i class="bi bi-emoji-frown-fill"></i></p> 
+           <div class="productosCarrito disabled">
             <div class="itemProducto">
                 <img class="imgItem"src="imagenesDiver/aletas1.webp" alt="">
                 <div class="tituloProd">
@@ -77,18 +78,19 @@
                 <button class="eliminarProd"><i class="bi bi-trash3"></i></button>
             </div>
         </div>
-            <div class="carritoAcciones">
+            <div class="carritoAcciones disabled">
                 <div class="carritoLeft">
-                    <button class="carritoVaciar"></button>
+                    <button class="carritoVaciar">Vaciar Carrito</button>
                 </div>  
                 <div class="carritoRight">
                     <div class="carritoTotal">
-                        <p>Total:</p>
+                        <p>Total: $</p>
                         <p id="total"></p>
                 </div>
                 <button class="carritoComprar">Comprar ahora</button>
             </div>              
         </div>
+        <p class="carritoComprado disabled">Muchas Gracias por tu compra <i class="bi bi-emoji-laughing-fill"></i></p>
         </div>           
         <footer class="footer">
             <ul>
