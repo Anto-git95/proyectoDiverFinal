@@ -29,6 +29,7 @@ body {
 
 /* Header Styles */
 .header {
+  box-sizing: border-box;
   grid-area: header;
   background-color: #1b5672;
   color: #fff;
@@ -87,20 +88,18 @@ body {
 }
 
 /* Products Section */
-.productos-container {
-  width: 90%;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #fff;
+.mainProd{
+  box-sizing: border-box;
+  justify-content: center;
+  margin: 0;
+  
+}
+.productos-container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  
 }
 
 .card {
@@ -162,12 +161,6 @@ body {
 .bi-1-square{
 background-color: #1b5672;
 
-}
-
-.productos-container{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  
 }
 
 .contenedorCarrito{
