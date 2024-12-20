@@ -164,6 +164,12 @@ background-color: #1b5672;
 
 }
 
+.productos-container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  
+}
+
 .contenedorCarrito{
   display: flex;
   flex-direction: column;
