@@ -87,6 +87,11 @@ body {
   font-size: 1.2rem;
 }
 
+.video {
+  box-sizing: border-box;
+  justify-content: center;
+
+}
 /* Products Section */
 .mainProd{
   box-sizing: border-box;
@@ -247,24 +252,12 @@ background-color: #1b5672;
 width: 6rem;
 }
 
-
-
-
-
-
-
-
-
-
 /* Reviews Section */
-.reseñas-section {
-  background-color: #1b5672;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  border-radius: 10px;
-  width: 90%;
-  margin: 20px auto;
+.reseñas-section{
+  background-color: transparent;
+  color: #1a465a85;
+  border-style: double;  
+  border-radius: 1rem;
 }
 
 .reseñas-section h2 {
@@ -333,53 +326,142 @@ width: 6rem;
   font-size: 0.9rem;
 }
 
-/* Responsive Styles */
+.videoSection {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.videoSection video {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+}
+
+/* Reviews Section */
+.reseñas-section {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  text-align: center;
+}
+
+.reseña-card {
+  margin: 1rem auto;
+  padding: 1rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 500px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.reseña-card p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.reseña-card span {
+  display: block;
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #6c757d;
+}
+
+/* Footer */
+.footer {
+  background-color: #0d6efd;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer ul li {
+  display: inline;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-  #banner {
-    text-align: center;
-  }
-  .navbar ul {
+  .header{
     display: flex;
-    justify-content: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-  }
-  
-  .navbar li {
-    margin: 0 15px;
-  }
-  
-  .navbar a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1rem;
-    transition: color 0.3s;
   }
 
-.logo{
-  top: 5;
-  position: absolute;
-  margin: 1rem;
-}
-  
-   .row {
-    flex-direction: column;
-    align-items: center;
+  .navbar{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+  }
+
+  .navbar ul {
+    flex-direction: row;
+  }
+
+  #banner h2 {
+      font-size: 1.5rem;
+  }
+
+  #banner h5 {
+      font-size: 1rem;
   }
 
   .reseña-card {
-    max-width: 90%;
+      padding: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header{
+    display: flex;
   }
 
-  footer {
-    background-color: #1b5672;
-    color: #fff;
-    text-align: center;
-    padding: 10px 20px;
-    bottom: 0;
-    position: sticky;
-    display: flex;
+  .navbar{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+  }
+
+  .navbar ul {
+    flex-direction: row;
+  }
+  
+  .nav {
+   
+      font-size: 0.9rem;
+  }
+
+  .logo {
+    position: fixed;
+  }
+
+  #banner h2 {
+      font-size: 1.2rem;
+  }
+
+  #banner h5 {
+      font-size: 0.9rem;
+  }
+
+  .footer ul {
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
   }
 }
