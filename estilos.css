@@ -73,9 +73,8 @@ body {
   padding: 50px 20px;
   color: #ddd;
   text-align: left;
-  border-radius: 10px;
-  margin: 20px auto;
-  width: 90%;
+  margin: 20px 0px;
+  width: 100%;
 }
 
 #banner h2 {
@@ -87,11 +86,6 @@ body {
   font-size: 1.2rem;
 }
 
-.video {
-  box-sizing: border-box;
-  justify-content: center;
-
-}
 /* Products Section */
 .mainProd{
   box-sizing: border-box;
@@ -103,8 +97,7 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 .card {
@@ -160,17 +153,9 @@ body {
   background-color: #144455;
 }
 
-.btnCarrito{
-
-}
-
 #numerito{
   border-style: solid;
   border-color: #3a7cb167;
-}
-.bi-1-square{
-background-color: #1b5672;
-
 }
 
 .contenedorCarrito{
@@ -178,7 +163,6 @@ background-color: #1b5672;
   flex-direction: column;
   gap: 1.5rem;
 }
-
 
 .productosCarrito{
   display: flex;
@@ -257,25 +241,38 @@ background-color: #1b5672;
 width: 6rem;
 }
 
-/* Reviews Section */
+.videoSection {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.videoSection video {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+}
+
+
 .reseñas-section{
   background-color: transparent;
   color: #1a465a85;
-  border-style: double;  
-  border-radius: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .reseñas-section h2 {
+  padding-left: 30px;
   font-size: 1.8rem;
-  margin-bottom: 20px;
 }
 
 .reseña-card {
-  background-color: #fff;
-  color: #333;
-  padding: 15px;
+  background-color: #cfcfcf18;
+  color: #181818;
+  padding: 20px;
   margin: 10px auto;
   border-radius: 10px;
+  border-style: groove;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   max-width: 400px;
 }
@@ -292,7 +289,7 @@ width: 6rem;
   margin-top: 10px;
 }
 
-/* Footer Styles */
+
 .footer {
   background-color: #1b5672;
   color: #fff;
@@ -329,78 +326,6 @@ width: 6rem;
 .footer p {
   margin: 0;
   font-size: 0.9rem;
-}
-
-.videoSection {
-  text-align: center;
-  margin: 2rem 0;
-}
-
-.videoSection video {
-  max-width: 100%;
-  height: auto;
-  border: 2px solid #ddd;
-  border-radius: 8px;
-}
-
-/* Reviews Section */
-.reseñas-section {
-  background-color: #f8f9fa;
-  padding: 2rem;
-  text-align: center;
-}
-
-.reseña-card {
-  margin: 1rem auto;
-  padding: 1rem;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  max-width: 500px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.reseña-card p {
-  font-size: 1rem;
-  margin: 0;
-}
-
-.reseña-card span {
-  display: block;
-  margin-top: 0.5rem;
-  font-style: italic;
-  color: #6c757d;
-}
-
-/* Footer */
-.footer {
-  background-color: #0d6efd;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-  margin-top: auto;
-}
-
-.footer ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 1rem;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.footer ul li {
-  display: inline;
-}
-
-.footer a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.footer a:hover {
-  text-decoration: underline;
 }
 
 /* Responsive Design */

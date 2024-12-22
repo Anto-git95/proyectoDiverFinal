@@ -7,12 +7,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Balthazar&family=Buda:wght@300&family=Contrail+One&family=Marmelad&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="estilos.css">    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="estilos.css">    
     <title>The DivingProject</title>
 </head>
 <body>
-    <section class="layout">
         <header class="header">
             <!---------------------------------- Navbar---------------------------------------->
             <div class="navbar">    
@@ -26,21 +25,6 @@
                     <li class="nav-item"><a class="nav-link" href="contacto.html">CONTACTO</a></li>
                     <li class="nav-item"><a class="nav-link" href="reseñas.html">RESEÑAS</a></li>
                     <li class="nav-item"><a class="nav-link" href="carrito.html" class="btnCarrito"alt="carrito"><img src="imagenesDiver/carrito-de-compras.png">CARRITO  <span id="numerito"></span></a></li>
-                      <div id="carrito" class="u-pull-right">
-                            <!---  <table id="listarCarrito">
-                                <thead>
-                                    <tr>
-                                        <th>Imagen</th>
-                                        <th>Nombre</th>
-                                        <th>Precio</th>
-                                        <th>Cantidad</th>
-                                    </tr>
-                                </thead>
-                                <tbody></tbody>
-                            </table>
-                            <a href="#" id="vaciarCarrito" class="button">Vaciar carrito</a>
-                       --> </div>
-                    </li>
                 </ul>
             </div>
         </header>
@@ -66,7 +50,7 @@
 
       <!-- Reviews Section -->
        
-      <section class="reseñas-section">
+      <div class="reseñas-section">
         <h2>Nuestros clientes opinan:</h2>
         <div class="reseña-card">
           <p>"Excelente calidad de productos"</p>
@@ -76,7 +60,7 @@
           <p>"Atención amable y variedad de marcas"</p>
           <span>- Jane Smith</span>
         </div>
-      </section>
+    </div><br>
 
     <!-- Footer Section -->
     <footer class="footer">
@@ -88,9 +72,9 @@
       <p>&copy; 2024 E-commerce Store</p>
     </footer>
 
-</section>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="main.js"></script>
+<script src="carrito.js"></script>
 </body>
 </html>
