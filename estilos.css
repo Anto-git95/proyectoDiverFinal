@@ -163,6 +163,11 @@ body {
 .btnCarrito{
 
 }
+
+#numerito{
+  border-style: solid;
+  border-color: #3a7cb167;
+}
 .bi-1-square{
 background-color: #1b5672;
 

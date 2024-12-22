@@ -111,15 +111,14 @@ function actualizarBtAgregar(){
 
 let productosEnCarrito;
 
-const enCarritoLS = JSON.parse(localStorage.getItem("productosEnCarrito"));
-if(enCarritoLS){
-    productosEnCarrito = enCarritoLS;
+let enCarritoLs = localStorage.getItem("productosEnCarrito");
+if (enCarritoLs) {
+    productosEnCarrito = JSON.parse(enCarritoLs);
     actualizarNro();
-    
+
 } else{
     productosEnCarrito = [];
 }
-
 
 function agregarAlCarrito(e){
     const btnProdId = e.currentTarget.id;
