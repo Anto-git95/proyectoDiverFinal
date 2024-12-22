@@ -118,6 +118,7 @@ if (enCarritoLs) {
 
 } else{
     productosEnCarrito = [];
+
 }
 
 function agregarAlCarrito(e){

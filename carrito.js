@@ -7,7 +7,7 @@ const carritoCargado = document.querySelector("#carritoCargado");
 const carritoComprado = document.querySelector("#carritoComprado");
 const carritoAcciones = document.querySelector("#carritoAcciones");
 let botonesEliminar = document.querySelectorAll(".eliminarProd");
-const btnVaciar = document.querySelector(".carritoVaciar");
+const btnVaciar = document.querySelector("#btnVaciar");
 
 function cargarProductosenCarrito (){
     if (enCarrito && enCarrito.length > 0) {
