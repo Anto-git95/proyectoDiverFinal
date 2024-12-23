@@ -69,14 +69,14 @@ function eliminarDelCarrito (e){
     console.log(enCarrito);
     cargarProductosenCarrito();
 
-    localStorage.setItem("prodEnCarrito", JSON.stringify(enCarrito));
+    localStorage.setItem("enCarrito", JSON.stringify(enCarrito));
 }
 
 btnVaciar.addEventListener("click", vaciarCarrito);
 
 function vaciarCarrito (e){
     enCarrito.length = 0;
-    localStorage.setItem("prodEnCarrito", JSON.stringify(enCarrito));
+    localStorage.setItem("enCarrito", JSON.stringify(enCarrito));
 limpiarLocalStorage()
 }
 function limpiarLocalStorage(){ //clear
