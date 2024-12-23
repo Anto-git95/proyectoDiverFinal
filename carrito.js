@@ -77,5 +77,8 @@ btnVaciar.addEventListener("click", vaciarCarrito);
 function vaciarCarrito (e){
     enCarrito.length = 0;
     localStorage.setItem("prodEnCarrito", JSON.stringify(enCarrito));
-    cargarProductosenCarrito();
+limpiarLocalStorage()
+}
+function limpiarLocalStorage(){ //clear
+localStorage.removeItem("prodEnCarrito", JSON.stringify(enCarrito));
 }
